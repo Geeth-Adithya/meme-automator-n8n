@@ -38,13 +38,14 @@
       "parameters": {
         "modelId": {
           "__rl": true,
+          "value": "models/gemini-2.5-flash",
           "mode": "list",
-          "value": "models/gemini-3-flash-preview"
+          "cachedResultName": "models/gemini-2.5-flash"
         },
         "messages": {
           "values": [
             {
-              "content": "You are a savage, witty Gen-Z gamer and the admin for the premium Facebook meme page 'Glitch & Gear'. \nYour task is to write a highly engaging, relatable 1-line reaction caption for this gaming meme.\n\nMeme Title: {{ $json.title }}\n\nStrict Rules to Follow:\n1. Write ONLY a single, punchy, funny sentence or modern gamer reaction line (e.g., \"Bro took it personally 💀\", \"This hits way too close to home 😭\", \"Every single midnight 🤡\", \"Skill issue, honestly\").\n2. Keep it ultra-short (under 10-15 words) so users can read it instantly while scrolling.\n3. Use max 1-2 trending gaming emojis (💀, 😭, 🤡, 🎮). No formal or corporate emojis.\n4. Do NOT summarize the meme. Do NOT write long bullet points or lists.\n5. Always end with these hashtags: #glitchandgear #gamingmemes #gamerlife #pcmasterrace\n6. NO intro, NO outro, output ONLY the final caption text.\n"
+              "content": "{{ `You are a savage, witty Gen-Z gamer and the admin for the premium Facebook meme page 'Glitch & Gear'. \nYour task is to write a highly engaging, relatable 1-line reaction caption for this gaming meme.\n\nMeme Title: ` + $json.title + `\n\nStrict Rules to Follow:\n1. Write ONLY a single, punchy, funny sentence or modern gamer reaction line.\n2. Keep it ultra-short (under 10-15 words).\n3. Use 2-3 trending gamer emojis (💀, 😭, 🤡, 🎮, 🔥, 👑, 📉, 🧠) naturally within the text.\n4. Format the final output EXACTLY like this (with empty lines for spacing):\n\n[Your caption text here]\n\n \n \n#glitchandgear #gamingmemes #gamerlife #pcmasterrace #gamingcommunity #pcgaming #gamersunite\n\n5. NO intro, NO outro, output ONLY the final formatted text.` }}"
             }
           ]
         },
